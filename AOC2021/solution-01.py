@@ -43,6 +43,8 @@ while x < (n - 3):
         count += 1
     x += 1
 
+# I now realise I could've just tested if sonar[i] < sonar[i+3]
+
 # return the answer to part 2
 
 print(count)
