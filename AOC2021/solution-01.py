@@ -1,7 +1,7 @@
 import numpy as np
 
 def ImportData(filename):
-    # fucntion to import data from a text file
+    # function to import data from a text file
     data = np.loadtxt(filename)
     return data
 
