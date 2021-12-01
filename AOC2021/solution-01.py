@@ -6,6 +6,7 @@ def ImportData(filename):
     return data
 
 #input the problem data as sonar
+
 sonar = ImportData("input/01")
 
 # for part 1
@@ -18,7 +19,7 @@ sonar = ImportData("input/01")
 a = np.column_stack((sonar[1:], sonar[:-1]))
 
 # make a variable to count how many times depth increases
- 
+
 count = 0
 
 #iterate over the elements of a.  if a sonar element x[0] is greater than the preceeding sonar element x[1], increase the count by one 
@@ -27,11 +28,13 @@ for x in a:
         count += 1    
 
 # return the answer to part 1
+
 print(count)
 
 # part 2
 
 # get the length of sonar
+
 n = sonar.shape[0]
 
 x = 0
