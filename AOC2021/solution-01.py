@@ -23,13 +23,22 @@ a = np.column_stack((sonar[1:], sonar[:-1]))
 count = 0
 
 #iterate over the elements of a.  if a sonar element x[0] is greater than the preceeding sonar element x[1], increase the count by one 
+
 for x in a:
     if x[0] > x[1]:
         count += 1    
 
 # return the answer to part 1
 
+print("Answer to part one using for loop")
 print(count)
+
+
+# try using list comprehension instead
+
+steps = [(p, q) for [p, q] in np.column_stack((sonar[1:], sonar[:-1])) if p > q ] # use list comprehension to make a list containing only pair where p > q
+print("Answer to part one using list comp")
+print(len(steps))
 
 # part 2
 
@@ -49,5 +58,11 @@ while x < (n - 3):
 # I now realise I could've just tested if sonar[i] < sonar[i+3]
 
 # return the answer to part 2
-
+print("Answer to part two using while loop")
 print(count)
+
+# try using listcomp
+
+steps = [(p, q) for [p, q] in np.column_stack((sonar[3:], sonar[:-3])) if p > q ] # use list comprehension to make a list containing only pair where x_i+3 > x_i
+print("Answer to part two using list comp")
+print(len(steps))
