@@ -9,4 +9,5 @@ Much of this code is inelegant; that's what it is to figure out a new tool.
 
 # AOC 2021
 
-[Day 01](AOC2021/solution-01.py)
+[Day 01](AOC2021/01-solution.py)
+[Day 02](AOC2021/02-solution.py)
