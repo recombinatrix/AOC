@@ -5,7 +5,7 @@ import numpy as np
 up = sum(np.loadtxt("input/02", comments=["do", "fo"],dtype=str)[:,1].astype(np.int8)) 
 down = sum(np.loadtxt("input/02", comments=["up", "fo"],dtype=str)[:,1].astype(np.int8))
 forward = sum(np.loadtxt("input/02", comments=["up", "do"],dtype=str)[:,1].astype(np.int8)) #comment needs to be "do" not "d" because there is a d in forward
-print("part one: " + str(across * (down - up)))
+print("part one: " + str(forward * (down - up)))
 
 # oh well, this won't work at all for part 2
 
