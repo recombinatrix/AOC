@@ -1,32 +1,23 @@
 import numpy as np
+data = np.loadtxt("input/06", delimiter=",", dtype=int)
+fish = np.zeros((9,1), dtype=int)
 
-fish = np.loadtxt("input/06", delimiter=",", dtype=int)
-baby = np.full((1,1), 8)
+def fishbreeder(arr, days):
+    for day in range(days):
+        new = np.zeros((9,1), dtype=int)
+        for i in np.ndenumerate(arr):
+            if i[0][0] == 0:
+                new[8,0] = i[1]
+                new[6,0] = i[1]
+            else:
+                new[i[0][0]-1,0] += i[1]
+        arr = new
+    return(np.sum(arr[:,0]))
 
-day = 0
+for i in range(9): 
+    count = np.count_nonzero(data == i)
+    total -= count 
+    fish[i,0] = count
 
-while day < 80:
-    for i in np.ndenumerate(fish):
-        #print(i[0][0], "    ", i[1])
-        if i[1] > 0:
-            fish[i[0][0]] -= 1
-        elif i[1] == 0:
-            fish[i[0][0]] = 6
-            fish = np.append(fish, baby)
-    day += 1
-
-print("part1:", len(fish))
-
-
-while day < 256:
-    for i in np.ndenumerate(fish):
-        #print(i[0][0], "    ", i[1])
-        if i[1] > 0:
-            fish[i[0][0]] -= 1
-        elif i[1] == 0:
-            fish[i[0][0]] = 6
-            fish = np.append(fish, baby)
-    day += 1
-
-print("part2:", len(fish))
-
+print(fishbreeder(fish,80))
+print(fishbreeder(fish,256))
