@@ -11,4 +11,4 @@ for i in range(np.min(crabs),np.max(crabs)+1,1): #check all positions from first
         #print("crab position:" ,j,"to position:", i, "fuel cost:", abs(i-j), "total fuel cost for position", i, ":", use) 
     uses.append(use)
     cuses.append(cuse)
-print((min(uses), min(cuses))
+print(min(uses), min(cuses))
