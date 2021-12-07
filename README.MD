@@ -15,3 +15,4 @@ Much of this code is inelegant; that's what it is to figure out a new tool.
  * [Day 04](AOC2021/04-solution.py)
  * [Day 05](AOC2021/05-solution.py)
  * [Day 06](AOC2021/06-solution.py)
+ * [Day 07](AOC2021/07-solution.py)
