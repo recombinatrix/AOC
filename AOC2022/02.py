@@ -6,18 +6,15 @@ import pandas as pd
 # going to map things to dictionaries 
 
 code = {
+    # opponent plays
+    "A" : 0, # "Rock" ,
+    "B" : 1, # "Paper" ,
+    "C" : 2, # "Scissors" ,
 
-# opponent plays
-
-"A" : 0, # "Rock" ,
-"B" : 1, # "Paper" ,
-"C" : 2, # "Scissors" ,
-
-# my plays, score minus one so I can use it as a lookup
-
-"X" : 0,  # "Rock"
-"Y" : 1,  # "Paper" ,
-"Z" : 2,  # "Scissors" ,
+    # my plays, score minus one so I can use it as a lookup
+    "X" : 0,  # "Rock or loss"
+    "Y" : 1,  # "Paper or draw" ,
+    "Z" : 2,  # "Scissors or win" ,
 
 }
 
@@ -54,6 +51,8 @@ def play (p,q):
 raw = pd.read_csv("input/02",delim_whitespace=True,names=["elf","me"]).replace(code)
 
 raw["score"] = score(raw["elf"],raw["me"]) 
+
+# I would've liked to figure out how to do this with df.apply() and lambda's but I couldn't make it work
 
 print(raw["score"].sum())
 
