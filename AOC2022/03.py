@@ -1,3 +1,6 @@
+#!/usr/bin/env python 
+
+
 import string # lets use string methods to get the alphabet!
 import numpy as np
 
