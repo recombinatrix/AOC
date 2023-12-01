@@ -3,7 +3,7 @@
 import pandas as pd
 import math
 
-with open("input/05") as f:
+with open("input/05-bonus") as f:
     raw = f.readlines()
 
 
