@@ -3,7 +3,9 @@
 count = 0
 truecount = 0
 
-d = { # add digits for numbers shown as words, while keeping the numbers present so we can deal eith overlapping situations eg eightwo should resolve as an 8 followed by a 2
+d = { 
+# add digits for numbers shown as words, while keeping the numbers present so we can deal with overlapping words
+#eg eightwo should resolve as an 8 followed by a 2
     'zero'    : 'zero0zero',
     'one'     : 'one1one',
     'two'     : 'two2two',
@@ -32,5 +34,4 @@ with open("input/01") as f:
         print(line,trueline,trueparse,trueval,'\n')
 
 print(count)    
-
 print(truecount)    
