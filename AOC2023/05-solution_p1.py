@@ -67,3 +67,18 @@ print(min(plots))
 # ah
 # numbers go up
 # lets do this more sensibly
+
+
+# i can see what I need to do (construct ranges in each space, find the edges of those ranges, so I can find the minima at each level )
+# but my covid addled brain is struggling with actually doing that
+# i need a whiteboard to diagram it
+# i think the best answer is probably to start by looking at the ranges in locationspace, based on the location mapping 
+# then step backwards and generate the ranges in humidity space, based on the interactions between the humidity mapping and the loaction mapping
+# and work backwards from there till I get the ranges in soilspace
+# then, propagate forward from seedspace, getting the piecewise seedspace ranges based on the seven piecewise mappings
+# and map the start of each seedspace range to the corresponding point in locationspace, then take the minima of those
+
+# working backwards seems wise because it lets me find the segments with identity mappings
+
+# also I wish I had used a dictionary corresponding to the eight spaces, rather than a dictionary of the seven mappings
+# i'll rework it later
